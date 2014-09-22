@@ -17,28 +17,6 @@ local piece=myHero.name
 
 local SCRIPT_NAME = "IncomparableYasuo"
 
-local SOURCELIB_URL = "https://raw.github.com/TheRealSource/public/master/common/SourceLib.lua"
-
-local SOURCELIB_PATH = LIB_PATH.."SourceLib.lua"
-
-local prodstatus = false
-
-if FileExist(SOURCELIB_PATH) then
-	require("SourceLib")
-else
-	DOWNLOADING_SOURCELIB = true
-	DownloadFile(SOURCELIB_URL, SOURCELIB_PATH, function() PrintChat("Required libraries downloaded successfully, please reload") end)
-end
-if DOWNLOADING_SOURCELIB then PrintChat("Downloading required libraries, please wait...") return end
-if AUTOUPDATE then
-	 SourceUpdater(SCRIPT_NAME, version, "raw.github.com", "/B1nk/Elo-Rank/master/"..SCRIPT_NAME..".lua", SCRIPT_PATH .. GetCurrentEnv().FILE_NAME, "/B1nk/Version/master/"..SCRIPT_NAME..".version"):CheckUpdate()
-end
-local RequireI = Require("SourceLib")
-RequireI:Add("vPrediction", "https://raw.github.com/Hellsing/BoL/master/common/VPrediction.lua")
-RequireI:Add("SOW", "https://raw.github.com/Hellsing/BoL/master/common/SOW.lua")
-RequireI:Check()
-if RequireI.downloadNeeded == true then return end
-
 local buffTable = {'monkeykingspinkknockup',
                    'unstoppablefrocestun',
                    'oriannastun',
