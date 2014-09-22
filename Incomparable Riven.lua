@@ -17,19 +17,23 @@ local piece=myHero.name
 
 function Riven:OnProcessSpell(unit, spell)
     if not unit.isMe then return end
-    if spell.name == 'RivenTriCleave' then -- _Q
+    if spell.name == 'RivenTriCleave' then
         DelayAction(function() OW:resetAA() end, .25)
         self.AnimationCancel[menu.cancel]()
-    elseif spell.name == 'RivenMartyr' then -- _W
+    elseif spell.name == 'RivenMartyr' then
         DelayAction(function() OW:resetAA() end, .25)
         self.AnimationCancel[menu.cancel]()
-    elseif spell.name == 'RivenFeint'  then -- _E
+    elseif spell.name == 'RivenFeint'  then
         DelayAction(function() OW:resetAA() end, .25)
         self.AnimationCancel[menu.cancel]()
-    elseif spell.name == 'RivenFengShuiEngine' then -- _R first cast                
+    elseif spell.name == 'RivenFengShuiEngine' then              
         self.AnimationCancel[menu.cancel]()
     end
 end
+
+if spell.name == 'RivenTriCleave' then
+DelayAction(function() SOWi:resetAA() end, menu.Q["q"..Q_Sequence])
+AnimationCancel[menu.cancel]()
 
 if GetGame().isOver then
 		UpdateWeb(false, ScriptName, id, HWID)
