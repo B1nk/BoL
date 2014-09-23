@@ -11,7 +11,7 @@ assert(load(Base64Decode("G0x1YVIAAQQEBAgAGZMNChoKAAAAAAAAAAAAAQIDAAAAJQAAAAgAAI
 
 local AUTOUPDATE = false
 
-local version = 1.1
+local version = 1.3
 
 local piece=myHero.name
 
