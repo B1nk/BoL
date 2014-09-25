@@ -3,9 +3,9 @@ Incomparable Scripts
 
 Greatly Improved Solo Ranked  Elo
 
-Pls  do not download  !　　
+Pls  do not download　
 
-These scripts are private ! and they just semi.                                        
+These scripts are private...  and they just semi                                       
 
 B1nk
 ========
