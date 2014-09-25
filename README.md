@@ -4,7 +4,7 @@ Incomparable Scripts
 Greatly Improved Solo Ranked  Elo
 
 
-请勿下载.  这个脚本为私有，只有朋友。你不能够使用它 :(
+请勿下载....  这个脚本为私有, 只有朋友. 你不能够使用它 :(
 
 
                                            by B1nk
