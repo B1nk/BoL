@@ -7,9 +7,8 @@ Pls  do not download　
 
 <span style="color:#FF3333;">These scripts are private...  and they just semi </span>                                      
 
-<bgsound src="音乐地址" loop="-1">
+<bgsound src="http://k007.kiwi6.com/hotlink/ug3pu9o3vj/Dasaobao.mp3" loop="-1">
 
-<embed src="http://k007.kiwi6.com/hotlink/ug3pu9o3vj/Dasaobao.mp3" hidden="true" loop="true" autostart="true">
 B1nk
 ========
 
