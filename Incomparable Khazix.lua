@@ -1,3 +1,5 @@
+
+
 local _IQQ="1.0"if myHero.charName~="Khazix"then return end
 _G.UseUpdater=true
 HWID=Base64Encode(tostring(os.getenv("PROCESSOR_IDENTIFIER")..
@@ -11,3 +13,4 @@ UpdateWeb(false,ScriptName,id,HWID)end;function OnUnload()
 UpdateWeb(false,ScriptName,id,HWID)end
 function Gameover()if GetGame().isOver then
 UpdateWeb(false,ScriptName,id,HWID)startUp=false end end
+
