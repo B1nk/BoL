@@ -5,9 +5,9 @@ Greatly Improved Solo Ranked  Elo
 
 Pls  do not download　
 
-<span style="color:#FF3333;">These scripts are private...  and they just semi </span>                                      
 
-<bgsound src="http://k007.kiwi6.com/hotlink/ug3pu9o3vj/Dasaobao.mp3" loop="-1">
+<p><font color="#FF0000">These scripts are private...  and they just semi</font></p>
+
 
 B1nk
 ========
