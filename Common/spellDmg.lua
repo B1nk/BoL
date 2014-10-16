@@ -1,7 +1,9 @@
 --[[
 
-	spellDmg 1.46
-	
+ -- spellDmg
+ -- Version 1.46
+ -- by B1nk
+ 
 ]]--
 
 function getDmg(spellname,target,owner,stagedmg,spelllvl)
@@ -775,3 +777,4 @@ function getDmg(spellname,target,owner,stagedmg,spelllvl)
 	end
 	return TrueDmg, TypeDmg
 end
+
