@@ -107,7 +107,7 @@ menu=menu or scriptConfig("[SourceLib 汉化版] by B1nk","srcSpellClass")
 menu:addParam("predictionType","[预判选项]",SCRIPT_PARAM_LIST,1,{"VP预判","K预判"})
 menu:addParam("about", "[版本信息]             v1.3 ",SCRIPT_PARAM_INFO,"")
 _G.srcLib.spellMenu=menu
-print("<font color=\"#FF9933\">SourceLib: 姹夊寲鐗?/font> <font color=\"#FFFF00\">1.3</font> <font color=\"#FF9933\">宸插姞杞斤紒</font>")
+print("<font color=\"#FF9933\">SourceLib: 姹夊寲鐗?</font> <font color=\"#FFFF00\">1.3</font> <font color=\"#FF9933\">宸插姞杞斤紒</font>")
 print("<font color=\"#FF9933\">SourceLib: 浣跨敤Prodiction鍑虹幇閿欒鏃跺缓璁娇鐢╒Prediction! </font> <font color=\"#FF9966\">by B1nk </font>")
 end
 end
