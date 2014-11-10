@@ -3,7 +3,7 @@ if myHero.charName ~= "Ezreal" then
 end
 
 local version = "0.25"
-local SCRIPT_NAME = "Ezreal"
+local SCRIPT_NAME = "Incomparable Ezreal"
 local AUTOUPDATE = true
 local SOURCELIB_URL = "https://raw.github.com/B1nk/BoL/master/common/SourceLib.lua"
 local SOURCELIB_PATH = LIB_PATH .. "SourceLib.lua"
@@ -22,7 +22,7 @@ if DOWNLOADING_SOURCELIB then
 end
 
 if AUTOUPDATE then
-    SourceUpdater(SCRIPT_NAME, version, "raw.github.com", "/b1nk/bol/master/" .. SCRIPT_NAME .. ".lua", SCRIPT_PATH .. GetCurrentEnv().FILE_NAME, "/fter44/ilikeman/master/VersionFiles/" .. SCRIPT_NAME .. ".version"):CheckUpdate()
+    SourceUpdater(SCRIPT_NAME, version, "raw.github.com", "/b1nk/bol/master/" .. SCRIPT_NAME .. ".lua", SCRIPT_PATH .. GetCurrentEnv().FILE_NAME, "/b1nk/bol/master/version/" .. SCRIPT_NAME .. ".version"):CheckUpdate()
 end
 
 local RequireI = Require("SourceLib")
