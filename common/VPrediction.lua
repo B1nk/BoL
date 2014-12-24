@@ -2,7 +2,7 @@ local version = "1.2"
 local TESTVERSION = false
 local AUTOUPDATE = false
 local UPDATE_HOST = "raw.github.com"
-local UPDATE_PATH = "/b1nk/common/master/VPrediction.lua".."?rand="..math.random(1,10000)
+local UPDATE_PATH = "/b1nk/boL/master/common/VPrediction.lua".."?rand="..math.random(1,10000)
 local UPDATE_FILE_PATH = LIB_PATH.."vPrediction.lua"
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 
