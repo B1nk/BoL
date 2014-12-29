@@ -1,14 +1,14 @@
-local version = "1.2"
+local version = "1.11"
 local TESTVERSION = false
 local AUTOUPDATE = false
 local UPDATE_HOST = "raw.github.com"
-local UPDATE_PATH = "/b1nk/boL/master/common/VPrediction.lua".."?rand="..math.random(1,10000)
+local UPDATE_PATH = "/Ralphlol/BoLGit/master/VPrediction.lua".."?rand="..math.random(1,10000)
 local UPDATE_FILE_PATH = LIB_PATH.."vPrediction.lua"
 local UPDATE_URL = "https://"..UPDATE_HOST..UPDATE_PATH
 
 local function AutoupdaterMsg(msg) print("<font color=\"#6699ff\"><b>VPrediction TEMP FIX:</b></font> <font color=\"#FFFFFF\">"..msg..".</font>") end
 if AUTOUPDATE then
-	local ServerData = GetWebResult(UPDATE_HOST, "/b1nk/BoL/master/version/VPrediction.version")
+	local ServerData = GetWebResult(UPDATE_HOST, "/Ralphlol/BoLGit/master/VPrediction.version")
 	if ServerData then
 		ServerVersion = type(tonumber(ServerData)) == "number" and tonumber(ServerData) or nil
 		if ServerVersion then
@@ -41,29 +41,32 @@ function VPrediction:__init()
 	
 
 	if not _G.VPredictionMenu then
-		_G.VPredictionMenu = scriptConfig("VPrediction", "VPrediction")
+		_G.VPredictionMenu = scriptConfig("[ VP预判汉化版 ]by B1nk", "VPrediction")
 			
-			_G.VPredictionMenu:addParam("Mode", "Cast Mode", SCRIPT_PARAM_LIST, 1, {"Fast", "Medium", "Slow" })
+			_G.VPredictionMenu:addParam("Mode", " │  释放模式  │ ", SCRIPT_PARAM_LIST, 1, {"快", "中", "慢" })
 			
 			--[[Collision]]
-			_G.VPredictionMenu:addSubMenu("Collision", "Collision")
-				_G.VPredictionMenu.Collision:addParam("Buffer", "Collision buffer", SCRIPT_PARAM_SLICE, 20, 0, 100)
-				_G.VPredictionMenu.Collision:addParam("Minions", "Normal minions", SCRIPT_PARAM_ONOFF, true)
-				_G.VPredictionMenu.Collision:addParam("Mobs", "Jungle minions", SCRIPT_PARAM_ONOFF, true)
-				_G.VPredictionMenu.Collision:addParam("Others", "Others", SCRIPT_PARAM_ONOFF, true)
-				_G.VPredictionMenu.Collision:addParam("CHealth", "Check if minions are about to die (BETA)", SCRIPT_PARAM_ONOFF, false)
-				_G.VPredictionMenu.Collision:addParam("info", "-", SCRIPT_PARAM_INFO, "^ Can cause fps drops")
+			_G.VPredictionMenu:addSubMenu(" ☆☆━━━━━╮ ", "sep")
+			_G.VPredictionMenu:addSubMenu(" │  碰撞选项  │ ", "Collision")
+				_G.VPredictionMenu.Collision:addParam("Buffer", "--> │碰撞缓冲 ", SCRIPT_PARAM_SLICE, 30, 0, 100)
+				_G.VPredictionMenu.Collision:addParam("Minions", "--> │正常小兵 ", SCRIPT_PARAM_ONOFF, true)
+				_G.VPredictionMenu.Collision:addParam("Mobs", "--> │野区小兵 ", SCRIPT_PARAM_ONOFF, true)
+				_G.VPredictionMenu.Collision:addParam("Others", "--> │其他 ", SCRIPT_PARAM_ONOFF, true)
+				_G.VPredictionMenu.Collision:addParam("CHealth", "--> │检测即将死去的小兵 (测试) ", SCRIPT_PARAM_ONOFF, true)
+				_G.VPredictionMenu.Collision:addParam("info", "--> │             会导致Fps下降 ", SCRIPT_PARAM_INFO, "")
 
-				_G.VPredictionMenu.Collision:addParam("UnitPos", "Check collision at the unit pos", SCRIPT_PARAM_ONOFF, true)
-				_G.VPredictionMenu.Collision:addParam("CastPos", "Check collision at the cast pos", SCRIPT_PARAM_ONOFF, true)
-				_G.VPredictionMenu.Collision:addParam("PredictPos", "Check collision at the predicted pos", SCRIPT_PARAM_ONOFF, false)
+				_G.VPredictionMenu.Collision:addParam("UnitPos", "--> │检查单位碰撞 ", SCRIPT_PARAM_ONOFF, true)
+				_G.VPredictionMenu.Collision:addParam("CastPos", "--> │检查释放碰撞 ", SCRIPT_PARAM_ONOFF, true)
+				_G.VPredictionMenu.Collision:addParam("PredictPos", "--> │检查预判碰撞 ", SCRIPT_PARAM_ONOFF, false)
 
 			
-			_G.VPredictionMenu:addSubMenu("Developers", "Developers")
-				_G.VPredictionMenu.Developers:addParam("Debug", "Enable debug", SCRIPT_PARAM_ONOFF, false)
-				_G.VPredictionMenu.Developers:addParam("SC", "Show collision", SCRIPT_PARAM_ONOFF, false)
+			_G.VPredictionMenu:addSubMenu(" │  其他选项  │ ", "Developers")
+				_G.VPredictionMenu.Developers:addParam("Debug", "--> │启用调试 ", SCRIPT_PARAM_ONOFF, false)
+				_G.VPredictionMenu.Developers:addParam("SC", "--> │显示碰撞 ", SCRIPT_PARAM_ONOFF, false)
 			
-			_G.VPredictionMenu:addParam("Version", "Version", SCRIPT_PARAM_INFO, tostring(self.version))
+			_G.VPredictionMenu:addParam("Version", " │  脚本信息  │ ", SCRIPT_PARAM_INFO, tostring(self.version))
+			_G.VPredictionMenu:addParam("sep", " │  脚本汉化  ☆ ", SCRIPT_PARAM_INFO, "")
+			_G.VPredictionMenu:addParam("sep", " ╰━━━━━☆☆ ", SCRIPT_PARAM_INFO, "")
 	end
 
 	--[[Use waypoints from the last 10 seconds]]
